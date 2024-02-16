@@ -1,0 +1,2102 @@
+html {
+  overflow-x: hidden;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  
+}
+
+#engage{
+  
+    display: "flex";
+    position: "relative";
+    left: "40vw";
+    align-items: "center";
+    justify-content: "center"
+ 
+}
+/* Side Lines */
+.side__line {
+  display: block;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  z-index: 1000;
+  width: 6px;
+}
+.side__line::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: rgba(148, 148, 148, 0.15);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+.side__line .line__bar {
+  width: 100%;
+  height: 132px;
+  background: #000e8c;
+  position: relative;
+  z-index: 1;
+  transition: 0.1s ease;
+}
+.side__line.side__line--left {
+  left: 137px;
+}
+.side__line.side__line--left .line__bar {
+  top: 16%;
+}
+.side__line.side__line--right {
+  right: 137px;
+}
+.side__line.side__line--right .line__bar {
+  top: 82%;
+}
+
+@media screen and (max-width: 1440px) {
+  .side__line {
+    display: block;
+    width: 4.5px;
+  }
+  .side__line .line__bar {
+    height: 99px;
+  }
+  .side__line.side__line--left {
+    left: 62px;
+  }
+  .side__line.side__line--left .line__bar {
+    top: 26%;
+  }
+  .side__line.side__line--right {
+    right: 62px;
+  }
+  .side__line.side__line--right .line__bar {
+    top: 80%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .side__line {
+    display: block;
+    width: 5px;
+  }
+  .side__line .line__bar {
+    height: 100px;
+  }
+  .side__line.side__line--left {
+    left: 42px;
+  }
+  .side__line.side__line--left .line__bar {
+    top: 26%;
+  }
+  .side__line.side__line--right {
+    right: 42px;
+  }
+  .side__line.side__line--right .line__bar {
+    top: 80%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 744px) {
+  .side__line {
+    display: none;
+  }
+}
+
+/* Footer Styling */
+.mobile-footer-container {
+  display: none;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 100px;
+  padding-inline: 200px;
+  padding-block: 100px;
+  background-color: #040404;
+  border-block: 2px solid #1f1f1f;
+}
+.footer-container ul.social-links {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 145px;
+}
+.footer-container ul.social-links a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer-container ul.social-links li.link {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: -0.05em;
+  text-align: left;
+}
+.footer-container ul.social-links li.link::marker {
+  font-size: 2.5rem;
+  color: #fff;
+  background: #fff;
+}
+.footer-container .footer-content {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 160px;
+}
+.footer-container .footer-content .company-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 40px;
+  max-width: 320px;
+  width: 100%;
+}
+.footer-container .footer-content .company-details .address {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.footer-container .footer-content .company-details .location a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.footer-container .footer-content ul.important-pages {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  column-gap: 136px;
+  row-gap: 26px;
+  width: 460px;
+  height: 220px;
+}
+.footer-container .footer-content ul.important-pages li.page a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.footer-container .footer-content .enquiries {
+  border-left: 2px solid #1f1f1f;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.footer-container .footer-content .enquiries .business-enquiries,
+.footer-container .footer-content .enquiries .career-enquiries {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+}
+.footer-container .footer-content .enquiries .business-enquiries .title,
+.footer-container .footer-content .enquiries .career-enquiries .title {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #a3a3a3;
+}
+.footer-container .footer-content .enquiries .business-enquiries .email,
+.footer-container .footer-content .enquiries .career-enquiries .email {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: none;
+  color: #fff;
+}
+.footer-container .footer-content .enquiries .business-enquiries .phone,
+.footer-container .footer-content .enquiries .career-enquiries .phone {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: none;
+  color: #fff;
+}
+.copyright {
+  padding-inline: 200px;
+  padding-block: 26px;
+  background-color: #040404;
+  color: #a3a3a3;
+}
+
+@media screen and (min-width: 1851px) and (max-width: 1900px) {
+  .footer-container .footer-content {
+    gap: 136px;
+  }
+  .footer-container .footer-content ul.important-pages {
+    column-gap: 110px;
+  }
+}
+@media screen and (min-width: 1801px) and (max-width: 1850px) {
+  .footer-container .footer-content {
+    gap: 110px;
+  }
+  .footer-container .footer-content ul.important-pages {
+    column-gap: 100px;
+  }
+}
+@media screen and (min-width: 1751px) and (max-width: 1800px) {
+  .footer-container .footer-content {
+    gap: 90px;
+  }
+  .footer-container .footer-content ul.important-pages {
+    column-gap: 100px;
+  }
+  .footer-container .footer-content .enquiries {
+    padding-left: 90px;
+  }
+}
+@media screen and (min-width: 1701px) and (max-width: 1750px) {
+  .footer-container,
+  .copyright {
+    padding-inline: 190px;
+  }
+  .footer-container .footer-content {
+    gap: 80px;
+  }
+  .footer-container .footer-content ul.important-pages {
+    column-gap: 90px;
+  }
+  .footer-container .footer-content .enquiries {
+    padding-left: 80px;
+  }
+}
+@media screen and (min-width: 1651px) and (max-width: 1700px) {
+  .footer-container,
+  .copyright {
+    padding-inline: 180px;
+  }
+  .footer-container ul.social-links {
+    gap: 140px;
+  }
+  .footer-container .footer-content {
+    gap: 70px;
+  }
+  .footer-container .footer-content ul.important-pages {
+    column-gap: 80px;
+  }
+  .footer-container .footer-content .enquiries {
+    padding-left: 70px;
+  }
+}
+@media screen and (min-width: 1601px) and (max-width: 1650px) {
+  .footer-container,
+  .copyright {
+    padding-inline: 170px;
+  }
+  .footer-container ul.social-links {
+    gap: 130px;
+  }
+  .footer-container .footer-content {
+    gap: 60px;
+  }
+  .footer-container .footer-content ul.important-pages {
+    column-gap: 70px;
+  }
+  .footer-container .footer-content .enquiries {
+    padding-left: 60px;
+  }
+}
+@media screen and (min-width: 1551px) and (max-width: 1600px) {
+  .footer-container,
+  .copyright {
+    padding-inline: 160px;
+  }
+  .footer-container ul.social-links {
+    gap: 120px;
+  }
+  .footer-container ul.social-links li.link {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container ul.social-links li.link::marker {
+    font-size: 2.25rem;
+  }
+  .footer-container .footer-content {
+    gap: 50px;
+  }
+  .footer-container .footer-content .company-details {
+    gap: 30px;
+  }
+  .footer-container .footer-content .company-details img {
+    max-width: 216px;
+    width: 100%;
+    height: 35px;
+  }
+  .footer-container .footer-content .company-details .address {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .company-details .location {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content ul.important-pages {
+    column-gap: 60px;
+  }
+  .footer-container .footer-content ul.important-pages li.page {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries {
+    padding-left: 50px;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .title,
+  .footer-container .footer-content .enquiries .career-enquiries .title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .email,
+  .footer-container .footer-content .enquiries .career-enquiries .email {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .phone,
+  .footer-container .footer-content .enquiries .career-enquiries .phone {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1550px) {
+  .footer-container,
+  .copyright {
+    padding-inline: 170px;
+  }
+  .footer-container ul.social-links {
+    gap: 110px;
+  }
+  .footer-container ul.social-links li.link {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container ul.social-links li.link::marker {
+    font-size: 2.25rem;
+  }
+  .footer-container .footer-content {
+    gap: 70px;
+  }
+  .footer-container .footer-content .company-details {
+    gap: 30px;
+  }
+  .footer-container .footer-content .company-details img {
+    max-width: 216px;
+    width: 100%;
+    height: 35px;
+  }
+  .footer-container .footer-content .company-details .address {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .company-details .location {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content ul.important-pages {
+    column-gap: 70px;
+  }
+  .footer-container .footer-content ul.important-pages li.page {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries {
+    padding-left: 40px;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .title,
+  .footer-container .footer-content .enquiries .career-enquiries .title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .email,
+  .footer-container .footer-content .enquiries .career-enquiries .email {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .phone,
+  .footer-container .footer-content .enquiries .career-enquiries .phone {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1441px) and (max-width: 1500px) {
+  .footer-container,
+  .copyright {
+    padding-inline: 160px;
+  }
+  .footer-container ul.social-links {
+    gap: 100px;
+  }
+  .footer-container ul.social-links li.link {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container ul.social-links li.link::marker {
+    font-size: 2.25rem;
+  }
+  .footer-container .footer-content {
+    gap: 70px;
+  }
+  .footer-container .footer-content .company-details {
+    gap: 30px;
+  }
+  .footer-container .footer-content .company-details img {
+    max-width: 216px;
+    width: 100%;
+    height: 35px;
+  }
+  .footer-container .footer-content .company-details .address {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .company-details .location a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content ul.important-pages {
+    column-gap: 70px;
+  }
+  .footer-container .footer-content ul.important-pages li.page {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries {
+    padding-left: 40px;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .title,
+  .footer-container .footer-content .enquiries .career-enquiries .title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .email,
+  .footer-container .footer-content .enquiries .career-enquiries .email {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .phone,
+  .footer-container .footer-content .enquiries .career-enquiries .phone {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1401px) and (max-width: 1440px) {
+  .footer-container {
+    padding: 60px 80px 40px;
+    gap: 54px;
+  }
+  .footer-container ul.social-links {
+    justify-content: start;
+    gap: 100px;
+    margin-left: 30px;
+  }
+  .footer-container ul.social-links li.link {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 20px;
+  }
+  .footer-container ul.social-links li.link::marker {
+    font-size: 2.25rem;
+  }
+  .footer-container .footer-content {
+    gap: 100px;
+    align-items: start;
+  }
+  .footer-container .footer-content .company-details {
+    gap: 24px;
+  }
+  .footer-container .footer-content .company-details img {
+    max-width: 216px;
+    width: 100%;
+    height: 35px;
+  }
+  .footer-container .footer-content .company-details .address {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .company-details .location a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content ul.important-pages {
+    column-gap: 80px;
+    row-gap: 22px;
+  }
+  .footer-container .footer-content ul.important-pages li.page {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries {
+    padding-left: 60px;
+    gap: 30px;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries,
+  .footer-container .footer-content .enquiries .career-enquiries {
+    gap: 5px;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .title,
+  .footer-container .footer-content .enquiries .career-enquiries .title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .email,
+  .footer-container .footer-content .enquiries .career-enquiries .email {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .phone,
+  .footer-container .footer-content .enquiries .career-enquiries .phone {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .copyright {
+    padding: 20px 80px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+  .footer-container {
+    padding: 60px 80px 40px;
+    gap: 54px;
+  }
+  .footer-container ul.social-links {
+    justify-content: start;
+    gap: 60px;
+    margin-left: 30px;
+  }
+  .footer-container ul.social-links li.link {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 20px;
+  }
+  .footer-container ul.social-links li.link::marker {
+    font-size: 2rem;
+  }
+  .footer-container .footer-content {
+    gap: 40px;
+    align-items: start;
+  }
+  .footer-container .footer-content .company-details {
+    max-width: 280px;
+    width: 100%;
+    gap: 24px;
+  }
+  .footer-container .footer-content .company-details img {
+    max-width: 216px;
+    width: 100%;
+    height: 35px;
+  }
+  .footer-container .footer-content .company-details .address {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .company-details .location a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content ul.important-pages {
+    column-gap: 20px;
+    row-gap: 22px;
+  }
+  .footer-container .footer-content ul.important-pages li.page {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries {
+    padding-left: 40px;
+    gap: 30px;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries,
+  .footer-container .footer-content .enquiries .career-enquiries {
+    gap: 5px;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .title,
+  .footer-container .footer-content .enquiries .career-enquiries .title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .email,
+  .footer-container .footer-content .enquiries .career-enquiries .email {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .phone,
+  .footer-container .footer-content .enquiries .career-enquiries .phone {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .copyright {
+    padding: 20px 80px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1200px) {
+  .footer-container {
+    padding: 50px 100px;
+    gap: 90px;
+  }
+  .footer-container ul.social-links {
+    justify-content: start;
+    gap: 90px;
+    margin-left: 30px;
+  }
+  .footer-container ul.social-links li.link {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 0px;
+  }
+  .footer-container ul.social-links li.link::marker {
+    font-size: 2rem;
+  }
+  .footer-container .footer-content {
+    row-gap: 80px;
+    column-gap: 100px;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+  .footer-container .footer-content .company-details {
+    max-width: 235px;
+    width: 100%;
+    gap: 24px;
+  }
+  .footer-container .footer-content .company-details img {
+    max-width: 216px;
+    width: 100%;
+    height: 35px;
+  }
+  .footer-container .footer-content .company-details .address {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .company-details .location a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content ul.important-pages {
+    column-gap: 124px;
+    row-gap: 22px;
+    max-width: 460px;
+    max-height: 220px;
+    width: 100%;
+    height: 100%;
+  }
+  .footer-container .footer-content ul.important-pages li.page {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries {
+    border: none;
+    padding-left: 0px;
+    gap: 70px;
+    flex-direction: row;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries,
+  .footer-container .footer-content .enquiries .career-enquiries {
+    gap: 5px;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .title,
+  .footer-container .footer-content .enquiries .career-enquiries .title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .email,
+  .footer-container .footer-content .enquiries .career-enquiries .email {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .phone,
+  .footer-container .footer-content .enquiries .career-enquiries .phone {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .copyright {
+    padding: 16px 100px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1001px) and (max-width: 1080px) {
+  .footer-container {
+    padding: 50px;
+    gap: 90px;
+  }
+  .footer-container ul.social-links {
+    justify-content: start;
+    gap: 90px;
+    margin-left: 30px;
+  }
+  .footer-container ul.social-links li.link {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 0px;
+  }
+  .footer-container ul.social-links li.link::marker {
+    font-size: 2rem;
+  }
+  .footer-container .footer-content {
+    row-gap: 80px;
+    column-gap: 100px;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+  .footer-container .footer-content .company-details {
+    max-width: 235px;
+    width: 100%;
+    gap: 24px;
+  }
+  .footer-container .footer-content .company-details img {
+    max-width: 216px;
+    width: 100%;
+    height: 35px;
+  }
+  .footer-container .footer-content .company-details .address {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .company-details .location a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content ul.important-pages {
+    column-gap: 124px;
+    row-gap: 22px;
+    max-width: 460px;
+    max-height: 220px;
+    width: 100%;
+    height: 100%;
+  }
+  .footer-container .footer-content ul.important-pages li.page {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries {
+    border: none;
+    padding-left: 0px;
+    gap: 70px;
+    flex-direction: row;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries,
+  .footer-container .footer-content .enquiries .career-enquiries {
+    gap: 5px;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .title,
+  .footer-container .footer-content .enquiries .career-enquiries .title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .email,
+  .footer-container .footer-content .enquiries .career-enquiries .email {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .phone,
+  .footer-container .footer-content .enquiries .career-enquiries .phone {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .copyright {
+    padding: 16px 50px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 745px) and (max-width: 1000px) {
+  .footer-container {
+    padding: 50px;
+    gap: 90px;
+  }
+  .footer-container ul.social-links {
+    justify-content: start;
+    column-gap: 100px;
+    row-gap: 40px;
+    margin-left: 30px;
+    flex-wrap: wrap;
+  }
+  .footer-container ul.social-links li.link {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 0px;
+  }
+  .footer-container ul.social-links li.link::marker {
+    font-size: 2rem;
+  }
+  .footer-container .footer-content {
+    row-gap: 80px;
+    column-gap: 100px;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
+  .footer-container .footer-content .company-details {
+    max-width: 235px;
+    width: 100%;
+    gap: 24px;
+  }
+  .footer-container .footer-content .company-details img {
+    max-width: 216px;
+    width: 100%;
+    height: 35px;
+  }
+  .footer-container .footer-content .company-details .address {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .company-details .location a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content ul.important-pages {
+    column-gap: 124px;
+    row-gap: 22px;
+    max-width: 460px;
+    max-height: 220px;
+    width: 100%;
+    height: 100%;
+  }
+  .footer-container .footer-content ul.important-pages li.page {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries {
+    border: none;
+    padding-left: 0px;
+    gap: 70px;
+    flex-direction: row;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries,
+  .footer-container .footer-content .enquiries .career-enquiries {
+    gap: 5px;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .title,
+  .footer-container .footer-content .enquiries .career-enquiries .title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .email,
+  .footer-container .footer-content .enquiries .career-enquiries .email {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .phone,
+  .footer-container .footer-content .enquiries .career-enquiries .phone {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .copyright {
+    padding: 16px 50px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 675px) and (max-width: 745px) {
+  .footer-container {
+    padding: 40px 65px;
+    gap: 75px;
+  }
+  .footer-container ul.social-links {
+    justify-content: start;
+    gap: 40px;
+    margin-left: 22px;
+  }
+  .footer-container ul.social-links li.link {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 0px;
+  }
+  .footer-container ul.social-links li.link::marker {
+    font-size: 1.5rem;
+  }
+  .footer-container .footer-content {
+    row-gap: 0px;
+    column-gap: 40px;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .footer-container .footer-content .company-details {
+    max-width: 260px;
+    width: 100%;
+    gap: 24px;
+    align-items: start;
+  }
+  .footer-container .footer-content .company-details img {
+    max-width: 215px;
+    width: 100%;
+    height: 38px;
+  }
+  .footer-container .footer-content .company-details .address {
+    color: #a3a3a3;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .company-details .location a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content ul.important-pages {
+    gap: 28px;
+    max-width: 200px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+  }
+  .footer-container .footer-content ul.important-pages li.page {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries {
+    border: none;
+    padding-left: 0px;
+    gap: 32px;
+    flex-direction: column;
+    margin-top: -130px;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries,
+  .footer-container .footer-content .enquiries .career-enquiries {
+    gap: 5px;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .title,
+  .footer-container .footer-content .enquiries .career-enquiries .title {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .email,
+  .footer-container .footer-content .enquiries .career-enquiries .email {
+    color: #a3a3a3;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .footer-container .footer-content .enquiries .business-enquiries .phone,
+  .footer-container .footer-content .enquiries .career-enquiries .phone {
+    color: #a3a3a3;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .copyright {
+    padding: 25px 65px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 476px) and (max-width: 675px) {
+  .footer-container {
+    display: none;
+  }
+  .mobile-footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 66px 40px 40px;
+    background-color: #040404;
+    border-block: 2px solid #1f1f1f;
+    gap: 40px;
+  }
+  .mobile-footer-container img.company-logo {
+    max-width: 216px;
+    width: 100%;
+    height: 38px;
+  }
+  .mobile-footer-container ul.important-pages {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #fff;
+    list-style: none;
+    gap: 24px;
+    border-bottom: 1.5px solid #1f1f1f;
+    padding-bottom: 40px;
+  }
+  .mobile-footer-container ul.important-pages .page a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mobile-footer-container ul.social-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    column-gap: 80px;
+    padding-left: 24px;
+    max-height: 170px;
+    height: 100%;
+    border-bottom: 1.5px solid #1f1f1f;
+    padding-bottom: 40px;
+  }
+  .mobile-footer-container ul.social-links li.link::marker {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .mobile-footer-container ul.social-links li.link a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mobile-footer-container .enquiries {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .mobile-footer-container .enquiries .business-enquiries,
+  .mobile-footer-container .enquiries .career-enquiries {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .mobile-footer-container .enquiries .business-enquiries .title,
+  .mobile-footer-container .enquiries .career-enquiries .title {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mobile-footer-container .enquiries .business-enquiries a.email,
+  .mobile-footer-container .enquiries .career-enquiries a.email {
+    text-decoration: none;
+    color: #a3a3a3;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mobile-footer-container .enquiries .business-enquiries a.phone,
+  .mobile-footer-container .enquiries .career-enquiries a.phone {
+    text-decoration: none;
+    color: #a3a3a3;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mobile-footer-container .company-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .mobile-footer-container .company-details .address-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-footer-container .company-details .address-container .label {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mobile-footer-container .company-details .address-container .address {
+    color: #a3a3a3;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mobile-footer-container .company-details .location a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+  .copyright {
+    padding: 30px 40px;
+    color: #a3a3a3;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 476px) {
+  .footer-container {
+    display: none;
+  }
+  .mobile-footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 66px 24px 40px;
+    background-color: #040404;
+    border-block: 2px solid #1f1f1f;
+    gap: 40px;
+  }
+  .mobile-footer-container img.company-logo {
+    max-width: 216px;
+    width: 100%;
+    height: 38px;
+  }
+  .mobile-footer-container ul.important-pages {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #fff;
+    list-style: none;
+    gap: 24px;
+    border-bottom: 1.5px solid #1f1f1f;
+    padding-bottom: 40px;
+  }
+  .mobile-footer-container ul.important-pages .page a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mobile-footer-container ul.social-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    column-gap: 80px;
+    padding-left: 24px;
+    max-height: 170px;
+    height: 100%;
+    border-bottom: 1.5px solid #1f1f1f;
+    padding-bottom: 40px;
+  }
+  .mobile-footer-container ul.social-links li.link::marker {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .mobile-footer-container ul.social-links li.link a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mobile-footer-container .enquiries {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .mobile-footer-container .enquiries .business-enquiries,
+  .mobile-footer-container .enquiries .career-enquiries {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .mobile-footer-container .enquiries .business-enquiries .title,
+  .mobile-footer-container .enquiries .career-enquiries .title {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mobile-footer-container .enquiries .business-enquiries a.email,
+  .mobile-footer-container .enquiries .career-enquiries a.email {
+    text-decoration: none;
+    color: #a3a3a3;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mobile-footer-container .enquiries .business-enquiries a.phone,
+  .mobile-footer-container .enquiries .career-enquiries a.phone {
+    text-decoration: none;
+    color: #a3a3a3;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mobile-footer-container .company-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .mobile-footer-container .company-details .address-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-footer-container .company-details .address-container .label {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mobile-footer-container .company-details .address-container .address {
+    color: #a3a3a3;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .mobile-footer-container .company-details .location a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+  .copyright {
+    padding: 24px;
+    color: #a3a3a3;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+.hero-div {
+  /* background-color: aqua; */
+  /* width: 1326px !important; */
+  height: 200px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  color: #fff !important;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-cont {
+  font-size: 5rem;
+}
+
+.hero-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.desc-cont {
+  width: 50rem;
+  align-self: center;
+  text-align: center;
+  font-size: 1.3em;
+  opacity: 0.8;
+}
+
+.desc-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  /* margin: 10px; */
+  padding: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+.desc-header {
+  margin: 7vh;
+  font-size: 3rem;
+  width: 38vw;
+  text-align: center;
+}
+.design-container {
+  width: 82vw;
+  /* border: 1px solid;
+   */
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+  gap: 35px;
+}
+
+.designer-div .col {
+  width: 100px !important;
+  height: 18vh;
+  /* border: 1px solid; */
+}
+
+.hrdiv {
+  margin: 2vw;
+}
+
+.infodiv {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.infotitle {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.infodesc {
+  text-align: center;
+}
+.infodesc p {
+  font-size: 1.6rem;
+  width: 63rem;
+}
+
+.carousaldiv {
+  margin: 5px;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+  width: 90vw;
+}
+.carousaldiv .row {
+  gap: 15px;
+}
+.carousaldiv .col {
+  width: 100px !important;
+  height: 40vh;
+  /* border: 1px solid; */
+}
+
+.ce1 img {
+  height: 50vh !important;
+}
+
+.systeminfo {
+  /* border: 1px solid; */
+  width: 78vw;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 5vh;
+}
+
+.systeminfo .head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.systeminfo .title {
+  font-size: 5rem;
+}
+.systeminfo .desc {
+  width: 70rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.infocols .row {
+  gap: 14vw;
+  margin-bottom: 5vh;
+  /* margin: 10vw; */
+  display: flex;
+  flex-direction: row !important;
+}
+
+.infocols .col {
+  /* border: 1px solid; */
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  padding: 15px;
+  gap: 10px;
+}
+
+.carousaldiv img {
+  height: 40vh;
+  width: 21.8vw;
+  object-fit: cover;
+}
+
+.row > * {
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.designer-div .col {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.designer-div .dehead {
+  width: 2.5vw;
+  font-size: 1.3em;
+}
+
+.designer-div .dedesc {
+  width: 10vw;
+  font-size: 1.6em;
+}
+
+.infohead {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.infonum {
+  width: 2.5em;
+  font-size: 1.5em;
+}
+
+.infocols .infodesc {
+  text-align: left;
+}
+
+.infocols .infodesc p {
+  width: 30vw;
+  font-size: 1.3em;
+}
+
+.carousel-div {
+  /* width: 100vw; */
+  /* height: auto; */
+  display: flex;
+  flex-direction: column;
+  border: 1px wheat;
+  color: white;
+  margin: 10px;
+  margin-top: 20px;
+  font-size: 3em;
+  text-align: center;
+  gap: 30px;
+}
+
+.contactdiv {
+  background-color: #000e8c;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  height: 35vh;
+}
+
+.css-1qzevvg {
+  bottom: 100px;
+}
+
+.partnershipinfo {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* align-items: center; */
+  justify-content: center;
+  /* ustify-content: center; */
+  position: relative;
+  left: 154px;
+  color: #fff;
+}
+
+.contitle {
+  font-size: xx-large;
+  width: 30vw;
+}
+
+.conpretitle {
+  /* font-size: small; */
+  opacity: 0.9;
+}
+
+.conbtn {
+  position: relative;
+  top: 20px;
+  border: 1px solid white;
+  border-radius: 30px;
+  width: 10vw;
+  padding: 5px;
+  justify-content: center;
+}
+
+.spiralimg img {
+  height: 43vh;
+  width: 20vw;
+  opacity: 0.1;
+  position: relative;
+  bottom: 52px;
+}
+
+.servicepic img {
+  width: 25vw;
+}
+
+.servicediv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+
+  color: #fff;
+  /* flex-direction: column; */
+}
+
+.service-cont {
+  display: flex;
+  width: 70%;
+  gap: 10vw;
+}
+
+.serviceinfo {
+  flex: 0.9;
+  /* flex: 0.9 1; */
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 15px;
+}
+
+.servicenext {
+  width: 6em;
+  font-size: smaller;
+}
+
+.servicename {
+  font-size: x-large;
+}
+
+.servicedesc {
+  font-size: smaller;
+  opacity: 0.8;
+}
+
+.servicebtn button {
+  border: 1px solid;
+  padding: 7px;
+  border-radius: 30px;
+}
+
+.c-divv{
+  width: 100%;
+  height: 500px;
+}
+
+.srvbtn{
+  display: none;
+}
+
+.ideal-div{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  position: relative;
+  top: 30px;
+  /* border: 1px solid black; */
+  width: 40vw;
+  height: 20vh;
+  
+}
+
+.ideal-head{
+  flex: 0.4;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.serv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  margin-top: 10px;
+
+}
+
+.serv-box{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items:flex-start;
+  
+}
+
+.serv-title{
+  width: 10vw;
+}
+@media screen and (max-width: 480px) {
+  #engage{
+    display: none;
+  }
+  .hero-div {
+    /* background-color: aqua; */
+    /* width: 1326px !important; */
+    height: 320px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    color: #fff !important;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .hero-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-cont {
+    font-size: 3rem;
+  }
+
+  .desc-cont {
+    width: fit-content;
+    align-self: center;
+    text-align: left;
+    /* font-size: 1em; */
+    opacity: 0.8;
+  }
+
+  .desc-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* margin: 10px; */
+    /* padding: 10px; */
+    width: 100%;
+    align-items: baseline;
+  }
+
+  .desc-header {
+    margin: 2vh;
+    font-size: 2em;
+    width: 80%;
+    /* text-align: center; */
+    text-align: left;
+  }
+
+  .design-container {
+    width: 82vw;
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .infodiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .infodesc p {
+    width: 100%;
+    font-size: 1.5em;
+  }
+  .infotitle {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .infodesc {
+    text-align: left;
+  }
+  .systeminfo{
+    width: 100%;
+  }
+  .systeminfo .title {
+    font-size: 3rem;
+  }
+
+  .systeminfo .desc {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .conpretitle {
+    font-size: x-large;
+    opacity: 0.9;
+  }
+
+  .partnershipinfo {
+    position: static;
+    /* left: 154px; */
+    padding: 10px;
+    width: 100%;
+    /* color: #fff; */
+  }
+
+  .contitle {
+    /* font-size: xx-large; */
+    width: 100%;
+  }
+
+  .conbtn {
+    width: 26vw;
+  }
+  .designer-div .row {
+    gap: 0;
+  }
+
+  .designer-div .col {
+    margin: 10vw;
+  }
+
+  .designer-div .dedesc {
+    /* /* width: 10vw; */
+    width: 100%;
+  }
+
+  .infocols .infodesc p {
+    width: 100%;
+    /* font-size: 1.3em; */
+  }
+  .infocols .col {
+    /* border: 1px solid; */
+    height: auto;
+
+    width: 100%;
+  }
+
+  .servicenext {
+    font-size: larger;
+}
+
+.servicename {
+  font-size: xx-large;
+}
+
+
+.servicedesc {
+  display: none;
+}
+
+.service-cont {
+ display: unset;
+}
+
+.servicebtn button {
+  display: none
+}
+.servicepic img {
+  width: 100%;
+}
+
+.c-divv{
+  width: 100%;
+  height: 200px;
+}
+
+.srvbtn{
+  display: flex;
+  margin-top: 20px;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 30px;
+}
+.contactdiv {
+ 
+  height: auto;
+}
+
+.hrdiv {
+  margin: 11vw;
+}
+.systeminfo .title {
+  font-size: 2.7em;
+}
+
+.infocols .row{
+  display: flex;
+  flex-direction: column;
+  margin: 10vw;
+}
+
+.ideal-div{
+ 
+  /* border: 1px solid black; */
+  width: 60vw;
+  height: auto;
+  
+}
+
+
+
+.serv{
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  /* justify-content:space-between; */
+  /* margin-top: 10px; */
+
+}
+
+
+
+.serv-title{
+  width: 30vw;
+}
+.serv-box {
+ 
+  padding: 10px;
+}
+}
+
