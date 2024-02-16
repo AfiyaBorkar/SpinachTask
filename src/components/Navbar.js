@@ -46,7 +46,7 @@ export default function Navbar() {
             </li>
           </ul>
 
-          <button id="engage"
+          {/* <button id="engage"
             class="emgage w-[150px] h-[50px] sm:block rounded-full text-center bg-black border border-white text-base font-normal text-white hover:text-black hover:bg-white transition hover:delay-150 hover:duration-200"
             style={{
               display: "flex",
@@ -57,7 +57,7 @@ export default function Navbar() {
             }}
           >
             Engage Us
-          </button>
+          </button> */}
           <div className="">
             {/* <button
       class="w-[150px] h-[50px] hidden sm:block rounded-full text-center bg-black border border-white text-base font-normal text-white hover:text-black hover:bg-white transition hover:delay-150 hover:duration-200"
